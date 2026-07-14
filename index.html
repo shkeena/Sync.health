@@ -28,52 +28,43 @@
       height: 100vh;
     }
 
-    /* 2. HEADER TEMA #064E3B */
+   /* 2. HEADER */
     .main-header {
-      background-color: #F5F5F5; /* Warna tema utama */
-      color: #064E3B;
-      height: 40px;
-      padding: 0 15px;
+      background-color: #F5F5F5; /* Berubah menjadi abu-abu terang */
+      color: #064E3B; /* Warna teks diubah ke hijau agar tetap terbaca di background terang */
+      height: 50px;
+      padding: 0 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 2px 8px rgba(6, 78, 59, 0.2);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Bayangan diperlembut */
       z-index: 10;
     }
 
-    .header-title {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 500;
-      font-size: 0.95rem;
-      letter-spacing: 0.5px;
-    }
-
     .header-title i {
-      color: #34D399; /* Aksen hijau terang */
+      color: #064E3B; /* Ikon juga disesuaikan agar senada */
     }
 
     .system-status {
       font-size: 0.75rem;
       font-weight: 600;
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba(6, 78, 59, 0.1); /* Background status disesuaikan */
+      color: #064E3B;
       padding: 4px 12px;
       border-radius: 12px;
       display: flex;
       align-items: center;
       gap: 6px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(6, 78, 59, 0.2);
     }
 
     .status-dot {
       width: 6px;
       height: 6px;
-      background-color: #34D399;
+      background-color: #064E3B; /* Dot status disesuaikan */
       border-radius: 50%;
-      box-shadow: 0 0 8px #34D399;
+      box-shadow: 0 0 8px rgba(6, 78, 59, 0.3);
     }
-
     /* 3. AREA IFRAME */
     .work-space {
       position: relative;
