@@ -25,9 +25,8 @@
   /* MEDIA QUERY UNTUK PORTRAIT (HP Tegak) */
   @media screen and (orientation: portrait) {
     .iframe-container iframe {
-      /* Pastikan iframe mengambil penuh ruang layar saat portrait */
-      width: 100vw;
-      height: 100vh;
+        width: 95%; /* Lebih lebar di portrait agar konten tidak terlalu sempit */
+        margin-top: 10px;
     }
   }
 
@@ -35,8 +34,8 @@
   @media screen and (orientation: landscape) {
     .iframe-container iframe {
       /* Opsional: Sesuaikan jika ingin perilaku berbeda saat landscape */
-      width: 100vw;
-      height: 100vh;
+     width: 80%; /* Lebih ringkas saat landscape */
+        margin: 5px auto; /* Margin lebih kecil agar hemat ruang vertikal */
     }
   }
 </style>
