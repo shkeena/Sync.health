@@ -2,34 +2,17 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <!-- Meta tag tambahan untuk memaksa perilaku mobile -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="mobile-web-app-capable" content="yes">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SYNC.HEALTH CARE</title>
-  
   <style>
-    body, html {
-      margin: 0; padding: 0;
-      width: 100%; height: 100%;
-      overflow: hidden;
-      background-color: #F8F9FA;
-    }
-    
-    /* Memaksa iframe agar selalu presisi 100% */
-    iframe {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-      /* Mencegah iframe melakukan rendering skala desktop */
-      -webkit-transform: translate3d(0,0,0);
-    }
+    body { background-color: #F8F9FA; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+    .loader { border: 4px solid #f3f3f3; border-top: 4px solid #064E3B; border-radius: 50%; width: 30px; height: 30px; animation: spin 1s linear infinite; }
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
   </style>
+  <!-- Redirect otomatis setelah 0 detik -->
+  <meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbyWgW4YficpmzXTj-gzv9iYREg2N3A8i-c_UQOls8yAAyZa2S3DaGJ3RoBvp2_N7LEk/exec">
 </head>
 <body>
-  <iframe src="https://script.google.com/macros/s/AKfycbyWgW4YficpmzXTj-gzv9iYREg2N3A8i-c_UQOls8yAAyZa2S3DaGJ3RoBvp2_N7LEk/exec" frameborder="0"></iframe>
+  <div class="loader"></div>
 </body>
 </html>
