@@ -29,8 +29,10 @@
       height: 100vh;
     }
 
-    /* Header tetap di atas */
+/* Header harus memiliki posisi agar z-index bekerja */
     .main-header {
+      position: relative;
+      z-index: 20; /* Lebih tinggi dari loading screen (10) */
       height: 35px;
       padding: 0 15px;
       display: flex;
@@ -43,15 +45,30 @@
       flex-shrink: 0;
     }
 
-.work-space {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden; /* Mencegah scroll ganda */
-}
+    /* Ubah work-space agar tidak menutupi header */
+    .work-space {
+      width: 100vw;
+      flex-grow: 1; /* Mengisi sisa ruang setelah header */
+      position: relative; /* Bukan absolute agar tidak menumpuk */
+      overflow: hidden;
+    }
 
+    /* Loading screen harus z-index lebih tinggi dari header agar menutupi semuanya saat proses */
+    .loading-screen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 30; /* Paling atas saat loading */
+      transition: opacity 0.3s ease;
+    }
+    
 .work-space iframe {
   width: 100vw;
   height: 100vh;
@@ -72,22 +89,6 @@
       height: 100% !important;
     }
   }
-
-    /* Loading Screen tetap di atas */
-    .loading-screen {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 10;
-      transition: opacity 0.3s ease;
-    }
 
     .header-title i {
       color: #064E3B; /* Ikon juga disesuaikan agar senada */
